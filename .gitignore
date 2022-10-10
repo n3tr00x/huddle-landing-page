@@ -1,0 +1,11 @@
+*.sketch
+
+README-template.md
+style-guide.md
+node_modules
+package-lock.json
+
+*.xd
+*.fig
+
+.DS_Store
