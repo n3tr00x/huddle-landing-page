@@ -1,0 +1,88 @@
+@use '../variables/colors' as c;
+@use '../variables/typography' as t;
+
+.header {
+	background: c.$violet top / contain no-repeat;
+	background-image: url('../../../images/bg-mobile.svg');
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100vh;
+		padding: 36px;
+	}
+
+	&__title {
+		line-height: 0;
+
+		img {
+			width: 40%;
+			max-width: 200px;
+			// object-fit: cover;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	&__main-image {
+		flex: 1;
+		line-height: 0;
+
+		img {
+			display: block;
+			max-width: 640px;
+			width: 100%;
+			margin: 0 auto;
+			object-fit: cover;
+		}
+	}
+
+	&__description {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+
+		h2 {
+			font-size: 24px;
+			text-align: center;
+		}
+
+		p {
+			line-height: 1.5;
+			text-align: center;
+			font-family: t.$openSans;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: center;
+		gap: 16px;
+	}
+
+	&__social {
+		padding: 8px;
+		border: 1px solid c.$white;
+		border-radius: 50%;
+		color: c.$white;
+		text-decoration: none;
+		transition: 0.3s color, 0.3s border;
+		font-size: 0;
+
+		&:hover {
+			border: 1px solid c.$magenta;
+			color: c.$magenta;
+		}
+
+		i {
+			font-size: 14px;
+		}
+	}
+}
