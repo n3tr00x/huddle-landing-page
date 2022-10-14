@@ -3,7 +3,7 @@
 
 .header {
 	background: c.$violet top / contain no-repeat;
-	background-image: url('../../../images/bg-mobile.svg');
+	background-image: url('../images/bg-mobile.svg');
 
 	&__container {
 		display: flex;
@@ -19,7 +19,6 @@
 		img {
 			width: 40%;
 			max-width: 200px;
-			// object-fit: cover;
 		}
 	}
 

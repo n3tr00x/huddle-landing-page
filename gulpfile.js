@@ -5,19 +5,15 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssMinify = require('gulp-clean-css');
 
 const styles = () => {
-	return src('./src/scss/**/*.scss')
+	return src('./scss/**/*.scss')
 		.pipe(scss())
 		.pipe(autoprefixer('last 2 versions'))
 		.pipe(cssMinify())
-		.pipe(dest('./docs/css/'));
-};
-
-const html = () => {
-	return src('./src/index.html').pipe(dest('./docs/'));
+		.pipe(dest('./css/'));
 };
 
 const watchTask = () => {
-	watch(['./src/scss/**/*.scss', './src/index.html'], series(styles, html));
+	watch('./scss/**/*.scss', series(styles));
 };
 
-exports.default = series(styles, html, watchTask);
+exports.default = series(styles, watchTask);
